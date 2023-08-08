@@ -19,7 +19,6 @@ const getUserWithEmail = function (email) {
   return pool
   .query(`SELECT * FROM users WHERE email = $1;`, [email])
   .then(response => {
-    console.log(response.rows[0])
     return response.rows[0]
   })
   .catch((err) => {
@@ -33,7 +32,14 @@ const getUserWithEmail = function (email) {
  * @return {Promise<{}>} A promise to the user.
  */
 const getUserWithId = function (id) {
-  return Promise.resolve(users[id]);
+  return pool
+  .query(`SELECT * FROM users WHERE id = $1;`, [id])
+  .then(response => {
+    return response.rows[0]
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
 };
 
 /**
@@ -42,10 +48,15 @@ const getUserWithId = function (id) {
  * @return {Promise<{}>} A promise to the user.
  */
 const addUser = function (user) {
-  const userId = Object.keys(users).length + 1;
-  user.id = userId;
-  users[userId] = user;
-  return Promise.resolve(user);
+  return pool
+  .query(`INSERT INTO users (name, password, email)
+   VALUES ($1, $2, $3)`, [user.name, user.password, user.email])
+  .then( () => {
+    return users
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
 };
 
 /// Reservations
@@ -70,7 +81,7 @@ const getAllReservations = function (guest_id, limit = 10) {
 const getAllProperties = (options, limit = 10) => {
   
   return pool
-    .query(`SELECT * FROM properties LIMIT $1`, [limit])
+    .query(`SELECT * FROM properties LIMIT $1;`, [limit])
     .then((result) => {
       return result.rows;
     })
