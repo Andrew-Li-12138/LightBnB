@@ -9,9 +9,9 @@ A simple multi-page Airbnb clone that uses a server-side Javascript to dispaly t
 ### Sign up
 !['signup1'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/signUp1.png?raw=true)
 !['signup2'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/signUp2.png?raw=true)
-### Review reservations
+### Review reservations by clicking My Reservations while logged in
 !['reservation'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/reservation.png?raw=true)
-### Filter properties
+### Filter properties by clicking Search
 !['filtering1'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/filtering1.png?raw=true)
 !['filtering2'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/filtering2.png?raw=true)
 
