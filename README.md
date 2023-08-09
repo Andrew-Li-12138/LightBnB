@@ -14,6 +14,9 @@ A simple multi-page Airbnb clone that uses a server-side Javascript to dispaly t
 ### Filter properties by clicking Search
 !['filtering1'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/filtering1.png?raw=true)
 !['filtering2'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/filtering2.png?raw=true)
+### Add properties to database
+!['addproperty1'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/addproperty1.png?raw=true)
+!['addproperty2'](https://github.com/Andrew-Li-12138/LightBnB/blob/main/docs/addproperty2.png?raw=true)
 
 ## Dependencies
 
